@@ -4,6 +4,21 @@ entrypoint = "src/app.ts"
 [nix]
 channel = "stable-22_11"
 
+[packager]
+language = "nodejs"
+
+[packager.features]
+packageSearch = true
+guessImports = true
+
+[languages.typescript]
+pattern = "**/*.ts"
+syntax = "typescript"
+
+[languages.typescript.languageServer]
+start = [ "typescript-language-server", "--stdio" ]
+
 [deployment]
-run = ["sh", "-c", "npm start"]
+run = "npm start"
 deploymentTarget = "cloudrun"
+buildCommand = "npm run build"
