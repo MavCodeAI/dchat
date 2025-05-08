@@ -1,0 +1,37 @@
+# Build and dependencies
+dist/*
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# WhatsApp session files
+*_sessions/
+bot_sessions/
+*tokens/
+.wwebjs*/
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# QR code images
+*.qr.png
+*qr.png
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
